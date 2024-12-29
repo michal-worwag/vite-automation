@@ -28,11 +28,11 @@ jobs:
         id: check-gh-key-secret
         shell: bash
         run: |
-          if [[ ! -z  "${{ secrets.VPS_PASSWORD }}" ]] && [[ ! -z  "${{ secrets.VPS_USERNAME }}" ]] && [[ ! -z  "${{ secrets.VPS_HOST }}" ]] && [[ ! -z  "${{ secrets.VPS_PORT }}" ]]; then
+          if [[ ! -z  "${{ secrets.VPS_PASSWORD }}" ]] && [[ ! -z  "${{ secrets.VPS_USERNAME }}" ]] && [[ ! -z  "${{ secrets.VPS_HOST }}" ]] && [[ ! -z  "${{ secrets.VPS_PORT }}" ]] && [[ ! -z  "${{ secrets.VPS_KEY }}" ]]; then
             echo "All secrets are declared."
             echo "declared=true" >> $GITHUB_OUTPUT;
           else
-            echo "At least one secret is missing: VPS_PASSWORD, VPS_USERNAME, VPS_HOST, VPS_PORT."
+            echo "At least one secret is missing: VPS_PASSWORD, VPS_USERNAME, VPS_HOST, VPS_PORT, VPS_KEY."
             exit 1
           fi
 
@@ -57,7 +57,7 @@ jobs:
         with:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USERNAME }}
-          password: ${{ secrets.VPS_PASSWORD }}
+          key: ${{ secrets.VPS_KEY }}
           port: ${{ secrets.VPS_PORT }}
           script: |
             echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u github.actor --password-stdin
