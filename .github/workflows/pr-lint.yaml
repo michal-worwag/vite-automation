@@ -35,7 +35,7 @@ jobs:
             ui
             JIRA-\d+
           # Configure that a scope must always be provided.
-          requireScope: true
+          requireScope: false
           # Configure which scopes are disallowed in PR titles (newline-delimited).
           # For instance by setting the value below, `chore(release): ...` (lowercase)
           # and `ci(e2e,release): ...` (unknown scope) will be rejected.
@@ -53,9 +53,6 @@ jobs:
             The subject "{subject}" found in the pull request title "{title}"
             didn't match the configured pattern. Please ensure that the subject
             doesn't start with an uppercase character.
-          # The GitHub base URL will be automatically set to the correct value from the GitHub context variable.
-          # If you want to override this, you can do so here (not recommended).
-          githubBaseUrl: https://github.myorg.com/api/v3
           # If the PR contains one of these newline-delimited labels, the
           # validation is skipped. If you want to rerun the validation when
           # labels change, you might want to use the `labeled` and `unlabeled`
