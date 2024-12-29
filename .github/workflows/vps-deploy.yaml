@@ -52,6 +52,9 @@ jobs:
           mkdir -p ~/.ssh/
           echo "${{ secrets.VPS_KEY }}" > ~/.ssh/private.key
           chmod 600 ~/.ssh/private.key
+          ssh-keyscan -H ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
+          eval "$(ssh-agent -s)"
+          ssh-add ~/.ssh/private.key
           ssh -i ~/.ssh/private.key -o "StrictHostKeyChecking no" ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_HOST }} -p ${{ secrets.VPS_PORT }} whoami
 
   docker-deploy:
