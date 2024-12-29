@@ -1,0 +1,29 @@
+---
+name: 'Run tests on PRs'
+on:
+  pull_request_target:
+    types:
+      - opened
+      - reopened
+      - edited
+
+concurrency:
+  group: ${{ github.ref }}-${{ github.workflow }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '22'
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm run test
