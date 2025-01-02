@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/michal-worwag/vite-automation/compare/v1.4.0...v1.4.1) (2025-01-02)
+
+
+### Miscellaneous Chores
+
+* remove redundant text line from App component ([879295e](https://github.com/michal-worwag/vite-automation/commit/879295e7770fd7c39fdb6ad0aca594c4b90e2e90))
+
 ## [1.4.0](https://github.com/michal-worwag/vite-automation/compare/v1.3.0...v1.4.0) (2025-01-02)
 
 
