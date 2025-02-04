@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/michal-worwag/vite-automation/compare/v1.4.1...v1.4.2) (2025-02-04)
+
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump vitest from 2.1.8 to 2.1.9 ([3a56fb0](https://github.com/michal-worwag/vite-automation/commit/3a56fb0580e6c3b533c6e916b7b68da08c32ea4e))
+
 ## [1.4.1](https://github.com/michal-worwag/vite-automation/compare/v1.4.0...v1.4.1) (2025-01-02)
 
 
