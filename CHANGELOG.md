@@ -1,3 +1,10 @@
+## [1.4.4](https://github.com/michal-worwag/vite-automation/compare/v1.4.3...v1.4.4) (2025-03-26)
+
+
+### Miscellaneous Chores
+
+* **deps:** bump esbuild and vitest ([6eb61dd](https://github.com/michal-worwag/vite-automation/commit/6eb61ddd55f61560467a1ca84a35516c7d287008))
+
 ## [1.4.3](https://github.com/michal-worwag/vite-automation/compare/v1.4.2...v1.4.3) (2025-03-26)
 
 
