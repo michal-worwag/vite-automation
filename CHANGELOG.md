@@ -1,3 +1,10 @@
+## [1.4.3](https://github.com/michal-worwag/vite-automation/compare/v1.4.2...v1.4.3) (2025-03-26)
+
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump vite ([9be8e82](https://github.com/michal-worwag/vite-automation/commit/9be8e82ce979e69908b5ee4d7775ce2182e6fa48))
+
 ## [1.4.2](https://github.com/michal-worwag/vite-automation/compare/v1.4.1...v1.4.2) (2025-02-04)
 
 
